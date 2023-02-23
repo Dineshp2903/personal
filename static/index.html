@@ -1,0 +1,35 @@
+<html>
+	<head>
+	   <!-- <div align="center" color="red">
+	   		<h3> Dinesh Palganesan</h3>
+	    </div> -->
+	    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+	</head>
+	<body>
+		<!-- Sidebar -->
+		<!-- <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%;">
+		  <h3 class="w3-bar-item"></h3>
+		  <a href="#" class="w3-bar-item w3-button">Home</a>
+		  <a href="#" class="w3-bar-item w3-button">Blog</a>
+		  <a href="#" class="w3-bar-item w3-button">Contact</a>
+		</div> -->
+		<div class="sidebar">
+  			<a class="active" href="#home">Home</a>
+  			<a href="#news">News</a>
+  			<a href="#contact">Contact</a>
+  			<a href="#about">About</a>
+		</div>
+
+		<!-- Page Content -->
+		<div class="content">
+
+		<div >
+		  <h1>Dinesh Palganesan</h1>
+		</div>
+		<div >
+			<img src="{{ url_for('static', filename='bg1.jpeg') }}" class="op5"/>
+			<h2 class="centered">"When you have a dream, you've got to grab it and never let go." —Carol Burnett</h2>
+		</div>
+	</body>
+
+</html>
