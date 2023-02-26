@@ -37,4 +37,8 @@ async def index(request:Request):
     return templates.TemplateResponse("index.html",context={"request":request});
 
 
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
+
+
 
