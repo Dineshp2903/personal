@@ -12,11 +12,33 @@ from pathlib import Path
 import logging
 
 
+from fastapi.middleware.cors import CORSMiddleware
+
+
+
+
+
 
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory= os.path.dirname(os.path.abspath(__file__))+"/static"), name="static")
 app.mount("/javascript", StaticFiles(directory= os.path.dirname(os.path.abspath(__file__))+"/javascript"), name="javascript")
+
+
+origins = [
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 templates = Jinja2Templates(directory=os.path.dirname(os.path.abspath(__file__)))
 
 
